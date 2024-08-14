@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- internal style  -->
+  <!-- <style>
+    /* selector (bộ chọn) */
+    h2 {
+      font-size: 30px;
+      background-color: purple;
+      color: white;
+    }
+  </style> -->
+  <link rel="stylesheet" href="./css/demo.css">
+</head>
+
+<body>
+  <!-- inline style  -->
+  <!-- nhược điểm : tính tái sử dụng ko có, gây rối phần bố cục html  -->
+  <h1 style="background-color: black;color: white;">Hôm nay tôi đi học</h1>
+  <h1 style="background-color: black;color: white;">BCS14</h1>
+
+  <h2 class="bg-orange text-center">Tôi là số một</h2>
+  <h2 class="bg-red text-center">Tôi là số hai</h2>
+
+  <!-- NV1 : Khách hàng Đông yêu cầu một layout html được cung cấp bao gồm một thẻ div, bên trong thẻ div sẽ có một sẽ h3 với nội dung là Tôi là Anh trai say ba và sẽ có một class cho thẻ h3 này với tên là bg-green. nhiệm vụ cần thực hiện sẽ tạo css cho thẻ h3 này có nền xanh lá chữ trắng và nội dung chữ nằm bên phải  -->
+  <div>
+    <h3 class="bg-green">Anh trai say ba</h3>
+  </div>
+  <h4 id="demo">Ngày hôm nay mây xanh nắng vàng</h4>
+
+  <p class="text-blue bg-yellow">Lorem ipsum dolor sit amet.</p>
+  <p class="text-blue bg-yellow">Tôi đang ở Quận 3</p>
+
+  <div class="flex-container">
+    <div class="demo1">logo</div>
+    <div class="demo2">nút điều hướng</div>
+  </div>
+
+  <div class="margin_demo">
+    <div class="margin1"></div>
+    <div class="margin2">Hello Tôi là Padding đây</div>
+  </div>
+  <div class="demo_boxsizing">
+    <div class="demo_box1"></div>
+    <div class="demo_box1"></div>
+    <div class="demo_box1"></div>
+    <div class="demo_box1"></div>
+  </div>
+</body>
+
+</html>

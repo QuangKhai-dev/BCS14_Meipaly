@@ -1,0 +1,480 @@
+/* reset css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+/* html {
+  thuộc tính scroll-behavior giúp điều chỉnh trạng thái khi scroll 
+  scroll-behavior: smooth;
+} */
+
+.backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 20px;
+  color: white;
+  background-color: #e62b4a;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  opacity: 0.5;
+}
+
+/* chiều dài của một thẻ html = nội dung + padding + border  */
+/* 100px = 2px + 10px + 88px  */
+/* 100px 50px 
+102px 52px */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+header {
+  color: white;
+  padding: 20px 0;
+  /* position: fixed; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #ffffff46;
+}
+
+/* gọi tới tất cả thẻ a bên trong thẻ header  */
+header a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+header .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header ul li {
+  /* không điều chỉnh được chiều cao và chiều dài khi sử dụng display : inline  */
+  /* không điều chỉnh được về margin top và bottom */
+  /* display : inline-block ra mắt và giải quyết được các vấn đề của inline  */
+  display: inline-block;
+  margin-right: 30px;
+  /* padding-right: 40px; */
+  text-transform: uppercase;
+  /* text-transform: lowercase; */
+  /* text-transform: capitalize; */
+}
+
+header .header_logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* header ul li:first-child a {
+  color: red;
+}
+
+header ul li:last-child a {
+  color: blue;
+}
+
+header ul li:nth-child(5) a {
+  color: green;
+} */
+
+header ul .active a {
+  color: red;
+}
+
+header ul li:hover a {
+  color: red;
+}
+
+/* banner css  */
+
+.banner {
+  background-image: url(./../img/home_slider.jpg);
+  height: 80vh;
+  /* điều chỉnh số lần lặp lại của hình nền  */
+  background-repeat: no-repeat;
+  /* điều chỉnh kích thước nền  */
+  background-size: cover;
+  /* điều chỉnh vị trí hiển của hình nền  */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* NV: Thực hiện tăng kích thước nội dung chữ cho các nội dung trong phần banner */
+.banner .sub_title {
+  font-size: 25px;
+}
+
+.banner h1 {
+  font-size: 75px;
+  /* điều chỉnh chiều cao nội dung trong thẻ html  */
+  line-height: 83px;
+}
+
+.banner button {
+  /* border-width: 3px; */
+  /* border-style: solid; */
+  /* border-style: dotted; */
+  /* border-style: dashed; */
+  /* border-style: double;
+  border-color: red; */
+  /* border: 3px double red; */
+  border: 2px solid #e62b4a;
+  background-color: #e62b4a;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.banner button:hover {
+  background-color: #af2238;
+}
+
+.banner i {
+  animation-name: arrowGoDown;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* service css  */
+.service {
+  background-color: black;
+  padding: 80px 0;
+  color: white;
+}
+
+.service .service_title {
+  text-align: center;
+}
+
+.service .service_title .sub_title {
+  color: #e62b4a;
+  font-size: 14px;
+}
+
+.service .service_title h2 {
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.service .service_title p:last-child {
+  color: #888888;
+  margin-top: 15px;
+  font-weight: bold;
+  /* Rectangle 12 */
+}
+
+.service .service_item .service_item_bg {
+  background-color: white;
+  color: black;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.service .service_item_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e62b4a;
+  height: 0;
+  width: 4px;
+  /* opacity: 0; */
+  /* cursor: pointer; */
+  /* visibility: hidden; */
+  transition: all 0.5s;
+}
+
+.service .service_item_bg:hover::before {
+  height: 100%;
+}
+
+.service .slick-dots li button:before {
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.service .slick-dots .slick-active button::before {
+  color: #e62b4a;
+}
+
+.service .service_item_bg i {
+  font-size: 50px;
+}
+
+.service .service_item {
+  padding: 0 15px;
+  height: 200px;
+}
+
+/* blog css  */
+.blog {
+  padding: 80px 0;
+}
+
+.blog .blog_content {
+  /* grid là thuộc tính giúp tạo cấu trúc dạng lưới  */
+  display: grid;
+  /* hỗ trợ thực hiện tạo số cột tương ứng khi sử dụng grid  */
+  grid-template-columns: repeat(4, 1fr);
+  /* tạo khoảng cách giữa các cột và các dòng  */
+  gap: 30px;
+  /* grid-template-columns: 1fr 2fr repeat(2, 1fr); */
+}
+
+.blog .blog_content img {
+  width: 100%;
+  height: 100%;
+  /* object fit giúp thay đổi kích thước của hình ảnh  */
+  object-fit: cover;
+  /* filter giúp chỉnh sửa hình ảnh trên web, một số các giá trị sử dụng coi ở trang developer mozila */
+  filter: grayscale(60%) contrast(60%);
+}
+
+.blog .blog_content .blog_item:first-child {
+  /* sử dụng grid-column thì xác định vị trí cột bắt đầu hợp nhất và số lượng cột sẽ hợp nhất  */
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.blog .blog_content .blog_item:last-child {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.blog .blog_item {
+  position: relative;
+}
+
+.blog .blog_overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* width: 100%;
+  height: 100%; */
+  bottom: 0;
+  right: 0;
+  background-color: rgba(230, 43, 74, 0.6);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+  opacity: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.blog .blog_overlay .blog_overlay_icon {
+  text-align: right;
+}
+
+.blog .blog_overlay_icon a {
+  background-color: white;
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  transform: translateY(60px);
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.6s;
+}
+
+.blog .blog_overlay_text {
+  text-transform: uppercase;
+  color: white;
+  transform: translateY(60px);
+  transition: all 0.6s;
+}
+
+.blog .blog_item:hover .blog_overlay {
+  opacity: 1;
+}
+
+.blog .blog_item:hover .blog_overlay_icon a {
+  transform: translateY(0);
+}
+
+.blog .blog_item:hover .blog_overlay_text {
+  transform: translateY(0);
+}
+
+/* number css  */
+.number {
+  background-color: black;
+  padding: 80px 0;
+  color: white;
+}
+
+/* 1400px 800px ==> 600px */
+.number .number_content {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.number .number_content h3 {
+  font-size: 55px;
+}
+
+/* digital css  */
+.digital {
+  padding: 100px 0;
+  background-image: url(./../img/bussiness_img_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment cố định hình nền vào khung nhìn của người dùng  */
+  background-attachment: fixed;
+}
+
+.digital video {
+  width: 100%;
+}
+
+.demo_position {
+  background-color: black;
+  height: 800px;
+  /* position: relative; */
+}
+
+.position {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  position: absolute;
+  /* độ trong suốt của một phần tử html  */
+  /* opacity: 0.8; */
+  /* bottom: 30px; */
+  /* top: 30px; */
+  /* left: 30px; */
+  /* left: -300px; */
+  /* right: -300px; */
+  /* top: -200px; */
+  /* right: ; */
+  /* left: ; */
+  /* bottom: 200px; */
+}
+
+/* contact css  */
+.contact .contact_content {
+  display: flex;
+}
+
+.contact .contact_content_map {
+  width: 60%;
+  margin-right: 20px;
+}
+
+.contact .contact_content_map iframe {
+  width: 100%;
+}
+
+.contact .contact_content_form {
+  width: 40%;
+}
+
+.contact .contact_content_form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact .contact_content_form input,
+.contact .contact_content_form textarea {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.contact .contact_content_form textarea {
+  flex-grow: 1;
+}
+
+.contact .contact_content_form button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.demo_before_after p {
+  height: 500px;
+  background-color: black;
+  position: relative;
+}
+
+.demo_before_after p::before {
+  content: "Hôm nay";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: #e62b4a;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  /* transform: translateX(-300px); */
+  /* transform: translateY(-200px); */
+  /* transform: translate(-300px, -200px); */
+  /* transform: scale(0.5); */
+  /* transform: rotate(180deg); */
+  /* transform: ; */
+}
+
+.demo_before_after p::after {
+  content: " đi học";
+  display: inline-block;
+  margin-left: 30px;
+}
+
+@keyframes arrowGoDown {
+  from {
+    /* setup các giá trị thuộc tính mặc định ban đầu của hiệu ứng  */
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    /* các thuộc tính sau khi kết thúc hiệu ứng  */
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
